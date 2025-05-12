@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { font-family: Arial, sans-serif; }
+        #timer { font-size: 24px; color: red; }
+        #challenge { margin: 20px 0; }
+        #congratulations { display: none; }
+    </style>
+</head>
+<button id="startTimerButton" style="position: fixed; bottom: 20px; left: 20px;" onclick="startTimer()">Start Timer</button>
+<button id="endTimerButton" style="display: none; position: fixed; bottom: 20px; right: 20px;" onclick="endTimerAndGenerateCSV()">End Timer & Generate CSV</button>
+    <h1>Competition Challenge</h1>
+    <div id="timer">Time left: <span id="time">120:00</span></div>
+    <h2 id="challengeQuestion"></h2>
+        <div id="inputFields" style="display: none;">
+            <input type="text" id="enterpriseId" placeholder="Enter your Enterprise ID">
+            <input type="text" id="answerInput" placeholder="Enter your answer">
+            <button onclick="submitFinalAnswer()">Submit</button>
+        </div>
+        <button onclick="showInputFields(1)" >Submit Answer</button>
+    </div>
+    <div id="congratulations">
+        <h2>Congratulations!</h2>
+        <img src="https://media.giphy.com/media/3o7btVQ4nN9g2fH0hG/giphy.gif" alt="Congratulations GIF">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
